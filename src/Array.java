@@ -8,17 +8,20 @@ public class Array {
         items = new int[size];
     }
 
+    // O(n)
     public void print() {
         for (int i = 0; i < itemCount; i++) {
             System.out.println(items[i]);
         }
     }
 
+    // O(n)
     public void insert(int item) {
         itemCount++;
         if (itemCount <= items.length) {
             items[itemCount -1] = item;
-        } else {
+        } 
+        else {
             var newItems = new int[itemCount];
             for (int i = 0; i < items.length; i++) {
                 newItems[i] = items[i];
@@ -27,7 +30,8 @@ public class Array {
             items = newItems;
         }
     }
-
+    
+    // O(n)
     public void delete(int index) {
         if (index > itemCount - 1) {
             throw new IllegalArgumentException();
@@ -38,6 +42,7 @@ public class Array {
         }
     }
     
+    // O(n)
     public int indexOf(int item) {
         for (int i = 1; i < itemCount; i++) {
             if (items[i] == item) {
