@@ -6,3 +6,4 @@
 <h2>Implemented Data Structures:</h2>
 
 - Array
+- Linked List
